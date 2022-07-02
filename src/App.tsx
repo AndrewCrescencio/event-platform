@@ -19,16 +19,6 @@ interface Lesson {
   title: string;
 }
 function App() {
-  // useEffect(() => {
-  //   client
-  //     .query({
-  //       query: GET_LESSONS_QUERY,
-  //     })
-  //     .then((reponse) => {
-  //       console.log(reponse.data);
-  //     });
-  // }, []);
-  // const { data } = useQuery(GET_LESSONS_QUERY);
   const { data } = useQuery<{ lessons: Lesson[] }>(GET_LESSONS_QUERY);
   return (
     <>
